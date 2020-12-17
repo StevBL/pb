@@ -21,13 +21,13 @@ function calc(quantity, goal){
 }
 
 function movePB(quantity, goal) {
-    let adv = Math.ceil(goal/10);
+    let adv = Math.ceil(goal/100);
     let porc = calc(quantity, goal);
     console.log(porc);
 
-    for(let i = 1; i <= adv; i++){
+    for(let i = 1; i <= goal; i++){
         let parts = (goal / adv) * i;
-        if(parts <= porc){
+        if(i <= porc){
           document.querySelector("#progress").style.width = `${porc}%`;
         }
     }

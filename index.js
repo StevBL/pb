@@ -37,7 +37,7 @@ function moveOnClick(){
     let quantity = document.getElementById('quantity').value;
     let goal = document.getElementById('goal').value;
 
-    if(!isNaN(quantity) && !isNaN(goal) && quantity<= goal){
+    if(!isNaN(quantity) && !isNaN(goal)){
     progBarGenerator();
     movePB(quantity, goal);
     }else{

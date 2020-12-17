@@ -23,11 +23,12 @@ function calc(quantity, goal){
 function movePB(quantity, goal) {
     let adv = Math.ceil(goal/10);
     let porc = calc(quantity, goal);
+    console.log(porc);
 
     for(let i = 1; i <= adv; i++){
         let parts = (goal / adv) * i;
         if(parts <= porc){
-          document.querySelector("#progress").style.width = `${50}%`;
+          document.querySelector("#progress").style.width = `${porc}%`;
         }
     }
 }
@@ -36,11 +37,11 @@ function moveOnClick(){
     let quantity = document.getElementById('quantity').value;
     let goal = document.getElementById('goal').value;
 
-    if(!isNaN(quantity) && !isNaN(goal)){
+    if(!isNaN(quantity) && !isNaN(goal) && quantity<= goal){
     progBarGenerator();
     movePB(quantity, goal);
     }else{
-        alert('Please enter only numeric values.');
+        alert('Please enter only numeric and valid values.');
     }
 
 }

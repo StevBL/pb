@@ -26,7 +26,7 @@ function movePB(quantity, goal) {
     console.log(porc);
 
     for(let i = 1; i <= goal; i++){
-        let parts = (goal / adv) * i;
+        //let parts = (goal / adv) * i;
         if(i <= porc){
           document.querySelector("#progress").style.width = `${porc}%`;
         }
